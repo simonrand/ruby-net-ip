@@ -12,7 +12,7 @@ module Net
         str = ""
         params.each do |k,v|
           instance_variable_set("@#{k}", v)
-          str << "#{k} #{v}"
+          str << " #{k} #{v}"
         end
         @params_string = str 
       end
