@@ -14,11 +14,11 @@ module Net
           instance_variable_set("@#{k}", v)
           str << "#{k} #{v}"
         end
-        params_string = str 
+        @params_string = str 
       end
 
       def to_params
-        params_string
+        @params_string
       end
     end
   end
