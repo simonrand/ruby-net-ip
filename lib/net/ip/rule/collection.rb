@@ -23,6 +23,7 @@ module Net
         def add(rule)
           result = `ip rule add #{rule.to_params}`
           raise result unless $?.success?
+          result
         end
 
         # Delete a rule from the ip rule list
@@ -34,6 +35,7 @@ module Net
         def delete(rule)
           result = `ip rule delete #{rule.to_params}`
           raise result unless $?.success?
+          result
         end
       end
     end
