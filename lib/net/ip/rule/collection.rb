@@ -21,7 +21,7 @@ module Net
         # @param rule {Rule} Rule to add to the list.
         # @return {void}
         def add(rule)
-          result = `sudo ip rule add #{rule.to_params}`
+          result = `ip rule add #{rule.to_params}`
           raise result unless $?.success?
         end
 
@@ -32,7 +32,7 @@ module Net
         # @param rule {Rule} Rule to delete from the list.
         # @return {void}
         def delete(rule)
-          result = `sudo ip rule delete #{rule.to_params}`
+          result = `ip rule delete #{rule.to_params}`
           raise result unless $?.success?
         end
       end
